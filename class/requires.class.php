@@ -14,10 +14,10 @@ $allowedOrigins = array(
 if (in_array($origin, $allowedOrigins)) {
     // Handle preflight request
     header("Access-Control-Allow-Origin: $origin");
-    header("Content-Type: application/json; charset=UTF-8");
-    header("Access-Control-Allow-Methods: POST");
+    header("Access-Control-Allow-Headers: *");
+    header("Content-Type: *");
+    header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
     header("Access-Control-Max-Age: 3600");
-    header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 } else {
     // Reject requests from other origins
     header("HTTP/1.1 403 Forbidden");

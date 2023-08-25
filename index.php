@@ -5,7 +5,7 @@ require_once './class/requires.class.php';
 
 $host = 'localhost';
 $user = 'root';
-$pasw = 'adminRoot@1';
+$pasw = '';
 $db = 'test';
 
 $user = new User($host, $user, $pasw, $db);
