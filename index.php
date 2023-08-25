@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Missing required data. [name, phone, email, join_date]"));
+        echo json_encode(array("message" => "Missing required data. [name, phone, email, join_date] 😕"));
     }
 }
 // Update user information
@@ -49,7 +49,7 @@ elseif ($_SERVER['REQUEST_METHOD'] == "PUT") {
         echo json_encode($updateUser);
     } else {
         http_response_code(400);
-        echo json_encode(array("message" => "Missing required data."));
+        echo json_encode(array("message" => "Missing required data. 😕"));
     }
 }
 // Delete User information
@@ -68,5 +68,5 @@ elseif ($_SERVER['REQUEST_METHOD'] == "DELETE") {
 // nothing to do here
 else {
     http_response_code(405);
-    echo json_encode(array("message" => "Method Not Allowed.", "method" => $_SERVER['REQUEST_METHOD']));
+    echo json_encode(array("message" => "Method Not Allowed. 😕", "method" => $_SERVER['REQUEST_METHOD']));
 }
