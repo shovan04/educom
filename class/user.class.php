@@ -60,10 +60,10 @@ class User
 
             if ($this->connection->query($sql)) {
                 http_response_code(201);
-                return array("message" => "Deatils updated");
+                return array("message" => "Deatils updated Successfully 😊");
             } else {
                 http_response_code(400);
-                return array("message" => "Failed to Update Deatils");
+                return array("message" => "Failed to Update Deatils 😕");
             }
         } else {
             return array("message" => "User ID Not Found 😞");
