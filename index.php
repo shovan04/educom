@@ -1,7 +1,7 @@
 <?php
 // singel page API version 0.5
 require_once './class/user.class.php';
-require_once './class/requires.class.php';
+// require_once './class/requires.class.php';
 
 $host = 'localhost';
 $user = 'root';

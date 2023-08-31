@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4) {
+            if (xhttp.status === 200) {
+                const response = JSON.parse(xhttp.responseText);
+                console.log(response);
+            } else {
+                console.log('Request failed:', xhttp.statusText);
+            }
+        }
+    };
+
+    xhttp.open('POST', 'http://backend-tuhin-sir-math.rf.gd/', true);
+    xhttp.send();
+
+</script>
+
+</html>
