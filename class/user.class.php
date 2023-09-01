@@ -31,8 +31,10 @@ class User
                 return array('message' => 'Faild to creat User 😞');
             }
         } else {
-            // Return JSON response with status of phone and email
-            return $checkUserData;
+            $msg = "";
+            $msg .= $checkUserData->isPhone === true ? " Phone already exists 😕. " : " ";
+            $msg .= $checkUserData->isEmail === true ? " Email already exists 😕. " : " ";
+            return array("message" => $msg);
         }
     }
 
